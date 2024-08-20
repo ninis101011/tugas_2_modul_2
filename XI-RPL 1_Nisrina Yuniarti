@@ -1,0 +1,42 @@
+class Kalkulator:
+    def init(self):
+        # Konstruktor: menginisialisasi nilai awal dari hasil
+        self.hasil = 0
+
+    def penjumlahan(self, angka1, angka2):
+        # Metode penjumlahan: menambahkan angka1 dan angka2, lalu menyimpan hasilnya
+        self.hasil = angka1 + angka2
+        return self.hasil
+
+    def pengurangan(self, angka1, angka2):
+        # Metode pengurangan: mengurangi angka1 dengan angka2, lalu menyimpan hasilnya
+        self.hasil = angka1 - angka2
+        return self.hasil
+
+    def perkalian(self, angka1, angka2):
+        # Metode perkalian: mengalikan angka1 dengan angka2, lalu menyimpan hasilnya
+        self.hasil = angka1 * angka2
+        return self.hasil
+
+    def pembagian(self, angka1, angka2):
+        # Metode pembagian: membagi angka1 dengan angka2, dengan pengecekan untuk mencegah pembagian oleh nol
+        if angka2 != 0:
+            self.hasil = angka1 / angka2
+            return self.hasil
+        else:
+            return "Tidak dapat membagi dengan nol!"
+
+# Membuat objek dari kelas Kalkulator
+kalkulator = Kalkulator()
+
+# Melakukan operasi penjumlahan dengan metode dari objek kalkulator
+print("Penjumlahan: ", kalkulator.penjumlahan(8, 5))   # Output: 13
+
+# Melakukan operasi pengurangan dengan metode dari objek kalkulator
+print("Pengurangan: ", kalkulator.pengurangan(8, 5))   # Output: 3
+
+# Melakukan operasi perkalian dengan metode dari objek kalkulator
+print("Perkalian: ", kalkulator.perkalian(8, 5))       # Output: 40
+
+# Melakukan operasi pembagian dengan metode dari objek kalkulator
+print("Pembagian: ", kalkulator.pembagian(8, 5))    # Output: 1.6
